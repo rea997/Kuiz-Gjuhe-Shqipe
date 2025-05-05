@@ -1,0 +1,280 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Quiz për Gjuhë Shqipe</h1>
+    <div class="quiz">
+        <div class="question">
+            <h3>1. Në cilën degë të gjuhës ndodhet gjuha shqipe?</h3>
+            <div class="options">
+                <button id="wrongButtonone" onclick="wrongAnswerOne()"> a) Gjuhët gjermanike</button>
+                <button id="rightButton" onclick="rightAnswer()"> b) Është degë në vete</button>
+                <button id="wrongButtontwo" onclick="wrongAnswerTwo()"> c) Gjuhët keltike</button>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <title>Kuizi i Gjuhës Shqipe - Rea</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+      font-family: sans-serif;
+    }
+    .quiz {
+      background-color: gray;
+      text-align: center;
+      width: 650px;
+      padding: 30px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .question {
+      text-align: center;
+      padding: 20px;
+      margin: 20px;
+      background-color: rgb(145, 145, 246);
+      width: 500px;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+    }
+    .options {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    button {
+      border: 1px rgb(58, 58, 255) solid;
+      background-color: rgb(192, 192, 254);
+      width: 100px;
+      height: 60px;
+      margin: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz">
+    <h1>Kuizi i Gjuhës Shqipe</h1>
+    <div class="question">
+  <h2>1. Kush e shkroi “Romeo dhe Zhulieta”?</h2>
+  <div class="options">
+    <button id="q1w1" onclick="wrongAnswer('q1w1', 'q1r', 'q1w2')">1. Leonardo da Vinci</button>
+    <button id="q1w2" onclick="wrongAnswer('q1w2', 'q1r', 'q1w1')">2. Miguel de Cervantes</button>
+    <button id="q1r" onclick="rightAnswer('q1w1', 'q1r', 'q1w2')">3. William Shakespeare</button>
+  </div>
+</div>
+
+<div class="question">
+  <h2>2. Kush e shkroi formulën e pagëzimit dhe kur?</h2>
+  <div class="options">
+    <button id="q2w1" onclick="wrongAnswer('q2w1', 'q2r', 'q2w2')">1. Shën Augustini në vitin 800</button>
+    <button id="q2w2" onclick="wrongAnswer('q2w2', 'q2r', 'q2w1')">2. Papa Gjon Pali II në vitin 2000</button>
+    <button id="q2r" onclick="rightAnswer('q2w1', 'q2r', 'q2w2')">3. Pal Engjëlli në vitin 1462</button>
+  </div>
+</div>
+
+<div class="question">
+  <h2>3. Cilët janë përbërësit e tekstit dramatik?</h2>
+  <div class="options">
+    <button id="q3r" onclick="rightAnswer('q3w1', 'q3r', 'q3w2')">1. Dialogu, didaskalitë dhe monologu</button>
+    <button id="q3w1" onclick="wrongAnswer('q3w1', 'q3r', 'q3w2')">2. Narratori, strofa dhe ritmi</button>
+    <button id="q3w2" onclick="wrongAnswer('q3w2', 'q3r', 'q3w1')">3. Skematikat, metaforat dhe legjendat</button>
+  </div>
+</div>
+
+<div class="question">
+  <h2>4. Cila është pozita e gjuhës shqipe në familjen e gjuhëve indoevropiane?</h2>
+  <div class="options">
+    <button id="q4w1" onclick="wrongAnswer('q4w1', 'q4r', 'q4w2')">1. Është dialekt i greqishtes së vjetër</button>
+    <button id="q4r" onclick="rightAnswer('q4w1', 'q4r', 'q4w2')">2. Është një degë më vete</button>
+    
+  </div>
+</div>
+  <!-- Questions 5–20 -->
+<div class="question">
+  <h2>5. Cili është antonimi i fjalës “i butë”?</h2>
+  <div class="options">
+    <button id="q5w1" onclick="wrongAnswer('q5w1', 'q5r', 'q5w2')">1. I njomë</button>
+    <button id="q5w2" onclick="wrongAnswer('q5w2', 'q5r', 'q5w1')">2. I thatë</button>
+    <button id="q5r" onclick="rightAnswer('q5w1', 'q5r', 'q5w2')">3. I ashpër</button>
+  </div>
+</div>
+
+<div class="question">
+  <h2>6. Në cilën fjali ka mbiemër të nyjshëm?</h2>
+  <div class="options">
+    <button id="q6r" onclick="rightAnswer('q6w1', 'q6r', 'q6w2')">1. Shtëpia e bukur ndodhet larg</button>
+    <button id="q6w1" onclick="wrongAnswer('q6w1', 'q6r', 'q6w2')">2. Unë shkruaj një letër</button>
+    <button id="q6w2" onclick="wrongAnswer('q6w2', 'q6r', 'q6w1')">3. Ai lexon një libër</button>
+  </div>
+</div>
+
+<div class="question">
+  <h2>7. Cila nga fjalitë përmban një ndajfolje mënyre?</h2>
+  <div class="options">
+    <button id="q7w1" onclick="wrongAnswer('q7w1', 'q7r', 'q7w2')">1. Ai foli në klasë</button>
+    <button id="q7w2" onclick="wrongAnswer('q7w2', 'q7r', 'q7w1')">2. Ai foli për librin</button>
+    <button id="q7r" onclick="rightAnswer('q7w1', 'q7r', 'q7w2')">3. Ai foli ngadalë</button>
+  </div>
+</div>
+
+<div class="question">
+  <h2>8. Cili është numërori përemëror?</h2>
+  <div class="options">
+    <button id="q8w1" onclick="wrongAnswer('q8w1', 'q8r', 'q8w2')">1. Dy</button>
+    <button id="q8w2" onclick="wrongAnswer('q8w2', 'q8r', 'q8w1')">2. Katër</button>
+    <button id="q8r" onclick="rightAnswer('q8w1', 'q8r', 'q8w2')">3. Disa</button>
+  </div>
+</div>
+
+<div class="question">
+  <h2>9. Cila fjalë është pasthirrmë?</h2>
+  <div class="options">
+    <button id="q9r" onclick="rightAnswer('q9w1', 'q9r', 'q9w2')">1. Oh!</button>
+    <button id="q9w1" onclick="wrongAnswer('q9w1', 'q9r', 'q9w2')">2. Kur</button>
+    <button id="q9w2" onclick="wrongAnswer('q9w2', 'q9r', 'q9w1')">3. Tani</button>
+  </div>
+</div>
+
+<div class="question">
+  <h2>10. Përemri vetor në fjalinë “Unë shkoj në shkollë” është:</h2>
+  <div class="options">
+    <button id="q10r" onclick="rightAnswer('q10w1', 'q10r', 'q10w2')">1. Unë</button>
+    <button id="q10w1" onclick="wrongAnswer('q10w1', 'q10r', 'q10w2')">2. Shkollë</button>
+    <button id="q10w2" onclick="wrongAnswer('q10w2', 'q10r', 'q10w1')">3. Në</button>
+  </div>
+</div>
+
+<div class="question">
+  <h2>11. Cila nga këto fjali ka numëror rendor?</h2>
+  <div class="options">
+    <button id="q11r" onclick="rightAnswer('q11w1', 'q11r', 'q11w2')">1. Ai është i treti në radhë</button>
+    <button id="q11w1" onclick="wrongAnswer('q11w1', 'q11r', 'q11w2')">2. Kam tre libra</button>
+    <button id="q11w2" onclick="wrongAnswer('q11w2', 'q11r', 'q11w1')">3. Librat janë të rinj</button>
+  </div>
+</div>
+
+<div class="question">
+  <h2>12. Cila togfjalësh është përdorur saktë?</h2>
+  <div class="options">
+    <button id="q12w1" onclick="wrongAnswer('q12w1', 'q12r', 'q12w2')">1. Me vrap shkuam ne.</button>
+    <button id="q12r" onclick="rightAnswer('q12w1', 'q12r', 'q12w2')">2. Ne shkuam me vrap.</button>
+    <button id="q12w2" onclick="wrongAnswer('q12w2', 'q12r', 'q12w1')">3. Vrap ne shkuam.</button>
+  </div>
+</div>
+
+<div class="question">
+  <h2>13. Folja “kam” është:</h2>
+  <div class="options">
+    <button id="q13w1" onclick="wrongAnswer('q13w1', 'q13r', 'q13w2')">1. Kalimtare</button>
+    <button id="q13r" onclick="rightAnswer('q13w1', 'q13r', 'q13w2')">2. Ndihmëse</button>
+    <button id="q13w2" onclick="wrongAnswer('q13w2', 'q13r', 'q13w1')">3. E mënyrës dëftore</button>
+  </div>
+</div>
+
+<div class="question">
+  <h2>14. Cilat janë pjesët e ligjëratës?</h2>
+  <div class="options">
+    <button style="height: 100px;" id="q14r" onclick="rightAnswer('q14w1', 'q14r', 'q14w2')">1. Emër, mbiemër, numëror, ndajfolje, folje, parafjalë, pjesëz, ndajshtesë, pasthirrma</button>
+    <button style="height: 100px;" id="q14w1" onclick="wrongAnswer('q14w1', 'q14r', 'q14w2')">2. Fjali, periudhë, paragraf</button>
+    <button style="height: 100px;" id="q14w2" onclick="wrongAnswer('q14w2', 'q14r', 'q14w1')">3. Strofa, rimë dhe vargje</button>
+  </div>
+</div>
+<div class="question">
+  <h2>15. Fjala “sot” është:</h2>
+  <div class="options">
+    <button id="q15w1" onclick="wrongAnswer('q15w1', 'q15r', 'q15w2')">1. Mbiemër</button>
+    <button id="q15r" onclick="rightAnswer('q15w1', 'q15r', 'q15w2')">2. Ndajfolje</button>
+    <button id="q15w2" onclick="wrongAnswer('q15w2', 'q15r', 'q15w1')">3. Pjesëz</button>
+  </div>
+</div>
+
+<div class="question">
+  <h2>16. Kush është sinonimi i fjalës “shquaj”?</h2>
+  <div class="options">
+    <button id="q16r" onclick="rightAnswer('q16w1', 'q16r', 'q16w2')">1. Dalloj</button>
+    <button id="q16w1" onclick="wrongAnswer('q16w1', 'q16r', 'q16w2')">2. Harroj</button>
+    <button id="q16w2" onclick="wrongAnswer('q16w2', 'q16r', 'q16w1')">3. Largoj</button>
+  </div>
+</div>
+
+<div class="question">
+  <h2>17. Në cilën degë të gjuhëve është gjuha shqipe?</h2>
+  <div class="options">
+    <button id="q17r" onclick="rightAnswer('q17w1', 'q17r', 'q17w2')">1. Është një degë më vete</button>
+    <button id="q17w1" onclick="wrongAnswer('q17w1', 'q17r', 'q17w2')">2. Në degën gjermanike</button>
+    <button id="q17w2" onclick="wrongAnswer('q17w2', 'q17r', 'q17w1')">3. Në degën sllave</button>
+  </div>
+</div>
+
+<div class="question">
+  <h2>18. Cila fjalë është folje?</h2>
+  <div class="options">
+    <button id="q18w1" onclick="wrongAnswer('q18w1', 'q18r', 'q18w2')">1. I bukur</button>
+    <button id="q18w2" onclick="wrongAnswer('q18w2', 'q18r', 'q18w1')">2. Libër</button>
+    <button id="q18r" onclick="rightAnswer('q18w1', 'q18r', 'q18w2')">3. Vrapoj</button>
+  </div>
+</div>
+
+<div class="question">
+  <h2>19. Në cilën fjali kemi ndajfolje vendi?</h2>
+  <div class="options">
+    <button id="q19r" onclick="rightAnswer('q19w1', 'q19r', 'q19w2')">1. Ai është këtu</button>
+    <button id="q19w1" onclick="wrongAnswer('q19w1', 'q19r', 'q19w2')">2. Ai lexon një libër</button>
+    <button id="q19w2" onclick="wrongAnswer('q19w2', 'q19r', 'q19w1')">3. Ai është shumë i zënë</button>
+  </div>
+</div>
+
+<div class="question">
+  <h2>20. Cila është fjala që tregon ndjenjë?</h2>
+  <div class="options">
+    <button id="q20w1" onclick="wrongAnswer('q20w1', 'q20r', 'q20w2')">1. Libri</button>
+    <button id="q20w2" onclick="wrongAnswer('q20w2', 'q20r', 'q20w1')">2. Është</button>
+    <button id="q20r" onclick="rightAnswer('q20w1', 'q20r', 'q20w2')">3. Ah!</button>
+  </div>
+</div>
+<script>
+    function wrongAnswer(clickedWrongId, rightId, otherWrongId) {
+      document.getElementById(clickedWrongId).style.backgroundColor = 'red';
+      document.getElementById(rightId).style.backgroundColor = 'rgb(192, 192, 254)';
+      document.getElementById(otherWrongId).style.backgroundColor = 'rgb(192, 192, 254)';
+    }
+
+    function rightAnswer(w1, r, w2) {
+      document.getElementById(w1).style.backgroundColor = 'rgb(192, 192, 254)';
+      document.getElementById(r).style.backgroundColor = 'rgb(53, 179, 53)';
+      document.getElementById(w2).style.backgroundColor = 'rgb(192, 192, 254)';
+    }
+  </script>
+</body>
+</html>
